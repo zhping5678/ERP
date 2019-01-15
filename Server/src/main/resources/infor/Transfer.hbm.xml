@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="infor.Transfer" table="transfer" schema="salesystem">
+        <id name="note">
+            <column name="note" sql-type="varchar(255)" not-null="true"/>
+        </id>
+        <property name="money">
+            <column name="money" sql-type="double" precision="-1"/>
+        </property>
+
+        <!--<many-to-one name="receiptPO" class="po.filepo.ReceiptPO"-->
+                     <!--column="accountID" lazy="false">-->
+        <!--</many-to-one>-->
+    </class>
+</hibernate-mapping>

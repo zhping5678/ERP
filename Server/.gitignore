@@ -1,0 +1,15 @@
+#Java
+*.class
+out
+Server.iml
+*.iml
+.idea
+#Mac
+.DS_Store
+src/.DS_Store
+*.DS_Store
+#Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+

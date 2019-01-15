@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.filepo.StrategyPO.VoucherStrategyPO" table="voucherstrategy" schema="salesystem">
+        <id name="ID">
+            <column name="id" sql-type="varchar(255)"/>
+        </id>
+        <property name="type">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.filevo.FileType</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="state">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.filevo.FileState</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="creator">
+            <column name="creator" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="IsUsing">
+            <column name="isUsing" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="note">
+            <column name="note" sql-type="varchar(255)"/>
+        </property>
+        <property name="createTime">
+            <column name="createTime" sql-type="varchar(255)"/>
+        </property>
+        <property name="startTime">
+            <column name="startTime" sql-type="varchar(255)"/>
+        </property>
+        <property name="endTime">
+            <column name="endTime" sql-type="varchar(255)"/>
+        </property>
+        <map name="content">
+            <key column="voucher_id"/>
+            <index column="money" type="java.lang.Double"/>
+            <element column="discount" type="java.lang.Double"/>
+        </map>
+    </class>
+</hibernate-mapping>

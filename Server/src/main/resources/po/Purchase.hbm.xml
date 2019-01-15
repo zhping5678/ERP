@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.filepo.PurchasePO" table="purchase" schema="salesystem">
+        <id name="ID">
+            <column name="id" sql-type="varchar(255)"/>
+        </id>
+        <property name="fileType">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.filevo.FileType</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="state">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.filevo.FileState</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="operator">
+            <column name="operator" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="clerk">
+            <column name="clerk" sql-type="varchar(255)"/>
+        </property>
+        <property name="note">
+            <column name="note" sql-type="varchar(255)"/>
+        </property>
+        <property name="createTime">
+            <column name="createTime" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="passTime">
+            <column name="passTime" sql-type="varchar(255)"/>
+        </property>
+        <property name="client">
+            <column name="client" sql-type="varchar(255)"/>
+        </property>
+        <property name="warehouse">
+            <column name="warehouse" sql-type="varchar(255)"/>
+        </property>
+        <property name ="date" type="date">
+            <column name ="searchDate"  />
+        </property >
+        <property name="total">
+            <column name="total" sql-type="double" not-null="true"/>
+        </property>
+        <set name="information" cascade="all" lazy="false">
+            <key column="pc_id"/>
+            <one-to-many class="infor.Infor"/>
+        </set>
+        <set name="commodityList" lazy="false" cascade="all">
+            <key column="pc_id"/>
+            <one-to-many class="infor.ProductItem"/>
+        </set>
+    </class>
+</hibernate-mapping>

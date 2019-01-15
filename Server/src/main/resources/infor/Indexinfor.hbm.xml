@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="infor.IndexInfor" table="indexinfor" schema="salesystem">
+        <id name="inforindex">
+            <column name="iid" sql-type="int(11)" not-null="true"/>
+        </id>
+        <property name="time">
+            <column name="time" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="sale_num">
+            <column name="saleNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="purchase_num">
+            <column name="purchaseNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="saleReturn_num">
+            <column name="saleReturnNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="purchaseReturn_num">
+            <column name="purchaseReturn" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="payment_num">
+            <column name="paymentNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="receipt_num">
+            <column name="receiptNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="level_num">
+            <column name="levelNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="gift_num">
+            <column name="giftNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="discount_num">
+            <column name="discountNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="pricePack_num">
+            <column name="pricePackNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="voucher_num">
+            <column name="voucherNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="rb_num">
+            <column name="rbNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="excess_num">
+            <column name="excessNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="loss_num">
+            <column name="lossNum" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

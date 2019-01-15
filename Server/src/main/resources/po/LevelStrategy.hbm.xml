@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.filepo.StrategyPO.LevelStrategyPO" table="levelstrategy" schema="salesystem">
+        <id name="ID">
+            <column name="ID" sql-type="varchar(255)"/>
+        </id>
+        <property name="type" not-null="true">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.filevo.FileType</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="fileState" not-null="true">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.filevo.FileState</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="creator">
+            <column name="creator" sql-type="varchar(255)"/>
+        </property>
+        <property name="LeastLevelToDel">
+            <column name="leastLevelToDel" sql-type="int"/>
+        </property>
+        <property name="level1">
+            <column name="level1" sql-type="int"/>
+        </property>
+        <property name="level2">
+            <column name="level2" sql-type="int"/>
+        </property>
+        <property name="level3">
+            <column name="level3" sql-type="int"/>
+        </property>
+        <property name="level4">
+            <column name="level4" sql-type="int"/>
+        </property>
+        <property name="IsUsing">
+            <column name="isUsing" sql-type="tinyint(1)"/>
+        </property>
+        <property name="createTime">
+            <column name="createTime" sql-type="varchar(255)"/>
+        </property>
+        <property name="startTime">
+            <column name="startTime" sql-type="varchar(255)"/>
+        </property>
+        <property name="endTime">
+            <column name="endTime" sql-type="varchar(255)"/>
+        </property>
+        <property name="note">
+            <column name="note" sql-type="varchar(255)"/>
+        </property>
+    </class>
+</hibernate-mapping>

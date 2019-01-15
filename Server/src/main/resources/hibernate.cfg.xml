@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <!-- 这个属性为在控制台打印sql语句 -->
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+
+    <!-- 指定Driver类的路径 -->
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+    <!-- 指定数据库的url，localhost:3306为数据库的IP和接口，salesystem为数据库名称 -->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/salesystem</property>
+
+    <!-- 数据库的账号 -->
+    <property name="hibernate.connection.username">root</property>
+      <!-- 数据库的密码 -->
+    <property name="hibernate.connection.password">mysql</property>
+      <!-- Drop and re-create the database schema on startup -->
+    <property name="hbm2ddl.auto">update</property>
+
+      <!-- 关联数据库和Object的文件,有多少加多少 -->
+      <mapping resource="po/Account.hbm.xml"/>
+      <mapping resource="po/User.hbm.xml"/>
+      <mapping resource="po/Log.hbm.xml"/>
+      <mapping resource="po/Client.hbm.xml"/>
+      <mapping resource="po/Commoditytype.hbm.xml"/>
+      <mapping resource="po/Warehouse.hbm.xml"/>
+      <mapping resource="po/Commodity.hbm.xml"/>
+      <mapping resource="infor/Accountbook.hbm.xml"/>
+      <mapping resource="po/Message.hbm.xml"/>
+      <mapping resource="infor/Indexinfor.hbm.xml"/>
+      <mapping resource="po/Purchase.hbm.xml"/>
+      <mapping resource="po/PurchaseReturn.hbm.xml"/>
+      <mapping resource="po/LevelStrategy.hbm.xml"/>
+      <mapping resource="po/GiftStrategy.hbm.xml"/>
+      <mapping resource="infor/ProductItem.hbm.xml"/>
+    <mapping resource="po/Receipt.hbm.xml"/>
+    <mapping resource="infor/Transfer.hbm.xml"/>
+      <mapping resource="infor/Sheetlist.hbm.xml"/>
+      <mapping resource="po/Payment.hbm.xml"/>
+      <mapping resource="infor/Infor.hbm.xml"/>
+      <mapping resource="infor/CommodityItem.hbm.xml"/>
+      <mapping resource="po/ExcessAndLoss.hbm.xml"/>
+      <mapping resource="po/DiscountStrategy.hbm.xml"/>
+      <mapping resource="po/Sale.hbm.xml"/>
+      <mapping resource="po/PricePackStrategy.hbm.xml"/>
+      <mapping resource="po/VoucherStrategy.hbm.xml"/>
+      <mapping resource="po/SaleReturn.hbm.xml"/>
+
+  </session-factory>
+</hibernate-configuration>

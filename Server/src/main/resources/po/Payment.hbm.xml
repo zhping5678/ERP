@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.filepo.PaymentPO" table="payment" schema="salesystem">
+        <id name="paymentID">
+            <column name="paymentID" sql-type="varchar(255)"/>
+        </id>
+        <property name="accountID">
+            <column name="accountID" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="createTime" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="operator">
+            <column name="operator" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="receicerID">
+            <column name="receiverID" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="totalAmount">
+            <column name="totalAmount" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <set name="information" cascade="all" lazy="false">
+            <key column="payment_id" />
+            <one-to-many class= "infor.Infor" />
+        </set>
+        <set name="sheet" cascade="all" lazy="false">
+            <key column="payment_id" />
+            <one-to-many class= "infor.SheetList" />
+        </set>
+    </class>
+</hibernate-mapping>

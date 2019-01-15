@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.messagepo.MessagePO" table="message" schema="salesystem">
+        <id name="id">
+            <column name="id" sql-type="long"/>
+            <generator class="increment"></generator>
+        </id>
+        <property name="time">
+            <column name="time" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="event">
+            <column name="event" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="CanDel">
+            <column name="canDel" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="sender">
+            <column name="sender" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <set name="receiver" table="receivers" lazy="false">
+            <key column="message_id" foreign-key="id"></key>
+            <element type="java.lang.String" column="receiver"/>
+        </set>
+    </class>
+</hibernate-mapping>

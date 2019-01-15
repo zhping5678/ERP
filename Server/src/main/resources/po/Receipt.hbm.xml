@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.filepo.ReceiptPO" table="receipt" schema="salesystem">
+        <id name="id">
+            <column name="receipt_id" sql-type="varchar(255)"/>
+        </id>
+        <property name="createTime">
+            <column name="createTime" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="clientID">
+            <column name="clientID" sql-type="varchar(255)"/>
+        </property>
+        <property name="accountID">
+            <column name="accountID" sql-type="varchar(255)"/>
+        </property>
+        <property name="operatorID">
+            <column name="operatorID" sql-type="varchar(255)"/>
+        </property>
+        <property name="sumMoney">
+            <column name="sumMoney" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(255)"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="varchar(255)" not-null="true"/>
+        </property>
+
+        <set name="transferList" cascade="all" lazy="false" >
+            <key column="receipt_id" ></key>
+            <one-to-many class= "infor.Transfer" />
+        </set>
+
+        <set name="information" cascade="all" lazy="false">
+            <key column="receipt_id" ></key>
+            <one-to-many class= "infor.Infor"></one-to-many></set>
+
+    </class>
+</hibernate-mapping>

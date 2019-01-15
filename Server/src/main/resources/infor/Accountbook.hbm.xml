@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="infor.AccountBookInfor" table="accountbook" schema="salesystem">
+        <id name="time">
+            <column name="time" sql-type="varchar(255)"/>
+        </id>
+        <set name="accounts" table="accountinit" lazy="false" cascade="all">
+            <key column="accountbook_id"></key>
+            <one-to-many class="infor.AccountInitInfor"/>
+        </set>
+        <set name="clients" table="clientinit" lazy="false" cascade="all">
+            <key column="accountbook_id"></key>
+            <one-to-many class="infor.ClientInitInfor"/>
+        </set>
+        <set name="commodity" table="commodityinit" lazy="false" cascade="all">
+            <key column="accountbook_id"></key>
+            <one-to-many class="infor.CommodityIniInfor"/>
+        </set>
+    </class>
+
+    <class name="infor.AccountInitInfor" table="accountinit">
+        <id name="aid" type="long">
+            <column name="Account_id"></column>
+            <generator class="native"></generator>
+        </id>
+        <property name="ID">
+            <column name="id" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="double" precision="-1"/>
+        </property>
+        <property name="isBan">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">infor.InitState</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+    </class>
+
+    <class name="infor.ClientInitInfor" table="clientinit">
+        <id name="cid" type="long">
+            <column name="Client_id"></column>
+            <generator class="native"></generator>
+        </id>
+        <property name="ID">
+            <column name="ID" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="level">
+            <column name="Level" sql-type="varchar(255)"/>
+        </property>
+        <property name="category">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.clientvo.ClientIdentity</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+        <property name="address">
+            <column name="address" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="phoneNum">
+            <column name="phoneNum" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="Email" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="postcode">
+            <column name="postcode" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="staff">
+            <column name="staff" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="quota">
+            <column name="quota" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="toPay">
+            <column name="toPay" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="toCollect">
+            <column name="toCollect" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="totalAmount">
+            <column name="totalAmount" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="isBan">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">infor.InitState</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+    </class>
+
+    <class name="infor.CommodityIniInfor" table="commodityinit">
+        <id name="comID" type="long">
+            <column name="Commodity_id"></column>
+            <generator class="native"></generator>
+        </id>
+        <property name="ID">
+            <column name="ID" sql-type="varchar(255)"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="size">
+            <column name="size" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="amountOfInventory">
+            <column name="amountOfInventory" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="buyingPrice">
+            <column name="buyingPrice" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="marketPrice">
+            <column name="marketPrice" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="theRecentBuyingPrice">
+            <column name="theRecentBuyingPrice" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="theRecentMarketPrice">
+            <column name="theRecentMarketPrice" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="isBan">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">infor.InitState</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+    </class>
+
+</hibernate-mapping>

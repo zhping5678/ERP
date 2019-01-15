@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="infor.CommodityItem" table="commodityitem" schema="salesystem">
+        <id name="commodityID">
+            <column name="commodityID" sql-type="varchar(255)"/>
+        </id>
+        <property name="commodityname">
+            <column name="commodityName" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="commoditySize">
+            <column name="commoditySize" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="inventory">
+            <column name="inventory" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="modiNum">
+            <column name="modiNum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="updateNum">
+            <column name="updateNum" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

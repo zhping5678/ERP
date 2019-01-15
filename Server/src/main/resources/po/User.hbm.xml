@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="po.userpo.UserPO" table="user" schema="salesystem">
+        <id name="ID">
+            <column name="ID" sql-type="varchar(255)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)"/>
+        </property>
+        <property name="password">
+            <column name="passwords" sql-type="varchar(255)"/>
+        </property>
+        <property name="position" not-null="true">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">vo.uservo.Position</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+
+        <property name="state">
+            <column name="state" sql-type="tinyint(1)"/>
+        </property>
+        <property name="right">
+            <column name="rights" sql-type="tinyint(1)"/>
+        </property>
+        <property name="isBan">
+            <column name="isBan" sql-type="tinyint(1)"/>
+        </property>
+        <property name="CanDel">
+            <column name="isCanDel" sql-type="tinyint(1)"/>
+        </property>
+        <property name="isOn">
+            <column name="isOn" sql-type="tinyint(1)"/>
+        </property>
+    </class>
+</hibernate-mapping>

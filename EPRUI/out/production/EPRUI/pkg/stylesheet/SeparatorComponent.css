@@ -1,8 +1,0 @@
-.separator *.line{
-    -fx-border-color: #e8e8e8;
-    -fx-border-width:0 0 1 0;
-}
-.separator{
-    -fx-background-color: white;
-}
-
