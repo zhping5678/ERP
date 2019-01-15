@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyFileUI.Replenish.ReplenishPaneController">
+   <children>
+      <ScrollPane prefHeight="810.0" prefWidth="960.0">
+         <content>
+            <VBox prefHeight="808.0" prefWidth="958.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="50.0" layoutY="20.0" style="-fx-background-color: #ffffff;" text="销售退货单" textFill="#660099">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name" layoutX="295.0" layoutY="38.0" prefHeight="48.0" prefWidth="270.0" promptText="请输入销售退货单名称" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="860.0" spacing="18.0">
+                           <children>
+                              <Label minWidth="55.0" prefHeight="35.0" text="供应商" textFill="#660099">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="client" prefWidth="130.0" promptText="请输入客户" style="-fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Label minWidth="55.0" prefHeight="35.0" text="业务员" textFill="#660099">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="worker" prefWidth="130.0" promptText="请输入业务员" style="-fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Label minWidth="55.0" prefHeight="35.0" text="操作员" textFill="#660099">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ope" prefHeight="35.0" text="12345678">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label minWidth="75.0" prefHeight="35.0" text="销售仓库" textFill="#660099">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="warehouse" prefWidth="150.0" promptText="NJ 南京仓库" style="-fx-background-color: #ffffff;">
+                                 <HBox.margin>
+                                    <Insets top="4.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="48.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="250.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="250.0" text="退货商品清单" textFill="#660099">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <VBox fx:id="V1" prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="商品行号" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="商品编号" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="商品名称" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="商品型号" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="退货数量" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="退货单价" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="100.0" text="退货金额" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefWidth="160.0" text="商品备注" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" right="48.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <AnchorPane onMouseClicked="#Clicked1" onMouseEntered="#Entered1" onMouseExited="#Exited1" prefHeight="1.0" prefWidth="958.0">
+                           <children>
+                              <Line fx:id="line1" endX="890.0" startX="30.0" stroke="WHITE" />
+                              <Circle fx:id="circle1" fill="WHITE" layoutX="25.0" layoutY="-14.0" radius="15.0" stroke="#f2f2f2" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Line endX="25.0" layoutX="10.0" layoutY="-14.0" startX="5.0" stroke="WHITE" strokeWidth="5.0" />
+                              <Line endY="-4.0" layoutX="25.0" startY="-24.0" stroke="WHITE" strokeWidth="5.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="860.0">
+                     <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="SubmitL" alignment="CENTER" layoutX="50.0" layoutY="50.0" onMouseClicked="#Clicked3" onMouseEntered="#Entered3" onMouseExited="#Exited3" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-border-color: #660099; -fx-border-radius: 15;" text="保存" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutX="708.0" layoutY="10.0" prefHeight="100.0" prefWidth="250.0" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="MoneySum" alignment="CENTER" prefWidth="250.0" text="合计退货金额 ￥0" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                              </VBox>
+                              <Label alignment="CENTER" layoutX="162.0" layoutY="50.0" onMouseClicked="#Clicked4" onMouseEntered="#Entered4" onMouseExited="#Exited4" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-border-color: #660099; -fx-border-radius: 15;" text="提交" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <AnchorPane prefHeight="1.0" prefWidth="958.0">
+                     <children>
+                        <Line endX="957.0" fill="#f2f2f2" stroke="#f2f2f2" />
+                     </children>
+                  </AnchorPane>
+                  <VBox minHeight="200.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <VBox fx:id="VBoxMessage" prefHeight="35.0" prefWidth="860.0">
+                           <children>
+                              <Label text="进货退货单经手信息" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="50.0" right="48.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <AnchorPane fx:id="AddRow12" onMouseClicked="#Clicked2" onMouseEntered="#Entered2" onMouseExited="#Exited2" prefHeight="1.0" prefWidth="958.0">
+                           <children>
+                              <Line fx:id="line3" endX="910.0" startX="30.0" stroke="WHITE" />
+                              <Circle fx:id="circle3" fill="WHITE" layoutX="25.0" layoutY="-14.0" radius="15.0" stroke="#f2f2f2" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Line endX="25.0" layoutX="10.0" layoutY="-14.0" startX="5.0" stroke="WHITE" strokeWidth="5.0" />
+                              <Line endY="-4.0" layoutX="25.0" startY="-24.0" stroke="WHITE" strokeWidth="5.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

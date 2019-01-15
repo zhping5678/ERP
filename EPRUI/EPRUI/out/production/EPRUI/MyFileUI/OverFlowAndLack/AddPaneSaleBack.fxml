@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="FinalPane" prefHeight="810.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyFileUI.OverFlowAndLack.AddPaneController">
+   <children>
+      <ScrollPane prefHeight="810.0" prefWidth="960.0">
+         <content>
+            <VBox prefHeight="808.0" prefWidth="958.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="title" alignment="CENTER" layoutX="50.0" layoutY="20.0" style="-fx-background-color: #ffffff;" text="销售退货单" textFill="#660099">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textfield1" focusTraversable="false" layoutX="299.0" layoutY="38.0" prefHeight="48.0" prefWidth="270.0" promptText="请输入销售退货单名称" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="958.0" endY="90.0" startY="90.0" stroke="#f2f2f2" />
+                        <Line endX="958.0" endY="120.0" startY="120.0" stroke="#f2f2f2" />
+                        <Label fx:id="lable1" layoutX="50.0" layoutY="93.0" style="-fx-background-color: #ffffff;" text="当前位置  销售退货单" textFill="#660099">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="back1" alignment="CENTER" layoutX="10.0" layoutY="20.0" onMouseClicked="#BackClicked" onMouseEntered="#BackEntered" onMouseExited="#BackExited" style="-fx-background-color: #ffffff;" text="&lt;" textFill="#f2f2f2">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <FlowPane fx:id="flowpane1" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="80.0" right="78.0" />
+                     </VBox.margin>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+.text-field{
+    -fx-accent:rgb(99,4,96); /*Change the color of selected part of text*/
+    -fx-background-color: white;
+    -fx-padding:3 6 3 6;
+    -fx-border-color: #e1e1e1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width:0 0 1 0;
+
+}
+.text-field:hover{
+    -fx-border-color: #d3d3d3;
+}
+.text-field:focused{
+    -fx-border-color: #b4b4b4;
+}
+
+.text-field:editable{
+
+}
+

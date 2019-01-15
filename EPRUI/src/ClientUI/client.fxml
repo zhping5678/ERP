@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientUI.clientController">
+    <children>
+        <VBox onMouseClicked="#ClickedP" prefHeight="810.0" prefWidth="960.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <AnchorPane onMouseClicked="#ClickedP" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="ID" alignment="CENTER" editable="false" focusTraversable="false" layoutX="8.0" layoutY="54.0" onKeyReleased="#keepSameWithItem" prefWidth="300.0" promptText="客户ID" style="-fx-background-color: #ffffff; -fx-text-fill: #660099;">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="NAME" alignment="CENTER" editable="false" focusTraversable="false" layoutX="308.0" layoutY="54.0" prefWidth="300.0" promptText="客户名称" style="-fx-background-color: #ffffff; -fx-text-fill: #660099;">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </AnchorPane>
+                <HBox onMouseClicked="#ClickedP" prefHeight="810.0" prefWidth="960.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <VBox fx:id="VBoxL" onMouseClicked="#ClickedP" prefHeight="810.0" prefWidth="480.0" style="-fx-background-color: #ffffff;">
+                            <children>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="编号" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text1" editable="false" focusTraversable="false" onKeyReleased="#keepSameWithTitle" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入编号" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                    <padding>
+                                        <Insets left="80.0" />
+                                    </padding>
+                                </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="分类" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text2" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入分类" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </HBox>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="姓名" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text3" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入姓名" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                    <padding>
+                                        <Insets left="80.0" />
+                                    </padding>
+                                </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="电话" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text4" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入电话" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </HBox>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="地址" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text5" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入地址" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                    <padding>
+                                        <Insets left="80.0" />
+                                    </padding>
+                                </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="邮编" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text6" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入邮编" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </HBox>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="等级" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text7" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入等级" style="-fx-background-radius: 50; -fx-background-color: #ffffff;" text="0">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                    <padding>
+                                        <Insets left="80.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="应收" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text8" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入应收" style="-fx-background-radius: 50; -fx-background-color: #ffffff;" text="0.0">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                    <padding>
+                                        <Insets left="80.0" />
+                                    </padding>
+                                </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="应付" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text9" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入应付" style="-fx-background-radius: 50; -fx-background-color: #ffffff;" text="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="备注" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text10" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入备注" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets left="80.0" />
+                           </padding>
+                        </HBox>
+                            </children>
+                            <HBox.margin>
+                                <Insets top="50.0" />
+                            </HBox.margin>
+                        </VBox>
+                  <VBox fx:id="VBoxL1" onMouseClicked="#ClickedP" prefHeight="810.0" prefWidth="480.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="应收额度" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text11" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入应收额度" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                                    <children>
+                                        <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="电子邮箱" textFill="#660099">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="text12" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入电子邮箱" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="累计金额" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text13" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入累计金额" style="-fx-background-radius: 50; -fx-background-color: #ffffff;" text="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox onMouseClicked="#ClickedP" prefHeight="50.0" prefWidth="480.0" spacing="20.0">
+                           <children>
+                              <Label onMouseClicked="#ClickedP" prefHeight="35.0" style="-fx-background-color: #ffffff;" text="默认业务员" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text14" editable="false" focusTraversable="false" onMouseClicked="#ClickedT" prefWidth="300.0" promptText="请输入默认业务员" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="300.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="attention1" text="客户ID/客户编号为必填项" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="attention2" text="客户分类为必填项" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="220.0" prefWidth="100.0" spacing="10.0">
+                                 <children>
+                                    <Label fx:id="banOrRecover" alignment="CENTER" onMouseClicked="#ClickedBan" onMouseEntered="#EnteredBan" onMouseExited="#ExitedBan" prefHeight="50.0" prefWidth="280.0" style="-fx-background-color: #ffffff; -fx-border-color: #660099; -fx-border-radius: 15;" text="禁用该客户" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="saveOrModify" alignment="CENTER" onMouseClicked="#ClickedSave" onMouseEntered="#EnteredSave" onMouseExited="#ExitedSave" prefHeight="50.0" prefWidth="280.0" style="-fx-background-color: #ffffff; -fx-border-color: #660099; -fx-border-radius: 15;" text="保存" textFill="#660099">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets top="110.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

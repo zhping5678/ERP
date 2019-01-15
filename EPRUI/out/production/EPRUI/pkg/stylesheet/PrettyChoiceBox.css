@@ -1,0 +1,31 @@
+.choice-box{
+    -fx-background-color: white;
+    -fx-border-color: lightgrey;
+   /* -fx-border-radius: 4;*/
+    -fx-pref-width: 350;
+    -fx-border-width: 0 0 1 0;
+
+}
+
+
+.choice-box .context-menu {
+    -fx-pref-width: 350;
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 4;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: rgb(99,4,96);
+}
+
+/* Text color of non-focused items in the list*/
+
+.choice-box .menu-item{
+    -fx-background-radius:4;
+}
+/* Text color of non-focused items in the list*/
+
+.choice-box .arrow{
+   -fx-padding: 0;
+    -fx-background-color: red;
+}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="960.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WarehouseUI.View.ViewController">
+   <children>
+      <ScrollPane prefHeight="810.0" prefWidth="960.0" style="-fx-background-color: #ffffff;">
+         <content>
+            <VBox prefHeight="808.0" prefWidth="958.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <VBox fx:id="VBoxR1" prefHeight="100.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label fx:id="title" layoutY="20.0" style="-fx-background-color: #ffffff; -fx-font-weight: bold; -fx-font-size: 48;" text="NJ 南京仓库" textFill="#630099">
+                                 <font>
+                                    <Font size="48.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="50.0" prefWidth="860.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 50;">
+                           <children>
+                              <HBox prefHeight="50.0" prefWidth="860.0" spacing="10.0">
+                                 <children>
+                                    <HBox prefHeight="50.0" prefWidth="410.0" spacing="10.0">
+                                       <children>
+                                          <Label text="开始时间" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Year1" onKeyReleased="#TextChangedAction" prefWidth="70.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #ffffff;" />
+                                          <Label text="年" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Month1" onKeyReleased="#TextChangedAction" prefWidth="50.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #ffffff;" />
+                                          <Label text="月" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Day1" onKeyReleased="#TextChangedAction" prefWidth="50.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #ffffff;" />
+                                          <Label text="日" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="50.0" top="12.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="410.0" spacing="10.0">
+                                       <children>
+                                          <Label text="结束时间" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Year2" onKeyReleased="#TextChangedAction" prefWidth="70.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #ffffff;" />
+                                          <Label text="年" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Month2" onKeyReleased="#TextChangedAction" prefWidth="50.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #ffffff;" />
+                                          <Label text="月" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Day2" onKeyReleased="#TextChangedAction" prefWidth="50.0" style="-fx-background-color: #f2f2f2; -fx-border-color: #ffffff;" />
+                                          <Label text="日" textFill="#660099">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="50.0" top="12.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="SubTitle1" prefHeight="50.0" style="-fx-font-weight: bold; -fx-font-size: 24;" text="出入库明细(2017.10.01——2017.10.03)" textFill="#660099">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="50.0" prefWidth="860.0">
+                           <children>
+                              <Label alignment="CENTER" prefWidth="100.0" text="时间" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="商品名称" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="出/入库" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="数量" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="金额" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="库存数量" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="260.0" text="ID编号" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="12.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="48.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox fx:id="VBoxR2" prefHeight="100.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="SubTitle2" style="-fx-font-weight: bold; -fx-font-size: 24;" text="合计(2017.10.01——2017.10.03)" textFill="#660099">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="50.0" prefWidth="860.0">
+                           <children>
+                              <Label alignment="CENTER" prefWidth="100.0" text="商品名称" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="出/入库" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="数量合计" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="金额" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="金额合计" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="100.0" text="现有库存" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="260.0" text="ID编号" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="12.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="48.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

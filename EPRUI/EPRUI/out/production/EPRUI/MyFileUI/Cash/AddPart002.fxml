@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="50.0" prefWidth="860.0" style="-fx-background-radius: 50;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyFileUI.Cash.AddPart001And002Controller">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="860.0" style="-fx-background-radius: 50; -fx-background-color: #ffffff;">
+         <children>
+            <Label fx:id="label1" alignment="CENTER" prefHeight="35.0" prefWidth="100.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textfield1" alignment="CENTER" focusTraversable="false" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textfield2" alignment="CENTER" focusTraversable="false" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textfield3" alignment="CENTER" focusTraversable="false" prefWidth="360.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

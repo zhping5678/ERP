@@ -1,0 +1,28 @@
+.button{
+    -fx-background-color: transparent;
+    -fx-pref-width: 42;
+    -fx-pref-height: 30;
+    -fx-max-width: -fx-pref-width;
+    -fx-max-height:  -fx-pref-height;
+    -fx-min-width: -fx-pref-width;
+    -fx-min-height:  -fx-pref-height;
+    -fx-background-image: url(/pkg/image/CloseWindowButtonIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 11 5;
+    -fx-background-radius: 0;
+    -fx-background-size:20
+}
+.button:hover{
+  /*  -fx-background-color: #c91511;*/
+    -fx-pref-width: 42;
+    -fx-pref-height: 30;
+    -fx-background-image: url(/pkg/image/CloseWindowButtonIconHover.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 11 5;
+    -fx-background-size:20
+}
+
+.button:pressed{
+   /* -fx-background-color: #8b0a13;*/
+
+}

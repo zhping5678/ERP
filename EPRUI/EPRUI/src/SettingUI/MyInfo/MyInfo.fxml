@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingUI.MyInfo.MyInfoController">
+   <children>
+      <HBox prefHeight="810.0" prefWidth="960.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <VBox prefHeight="810.0" prefWidth="480.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <HBox prefHeight="150.0" prefWidth="960.0" spacing="70.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="CENTER" minHeight="150.0" prefWidth="300.0" text="我的信息" textFill="#660099">
+                           <font>
+                              <Font size="64.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" />
+                     </padding>
+                  </HBox>
+                  <VBox fx:id="VBoxL" prefHeight="660.0" prefWidth="480.0">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="480.0" spacing="55.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label text="用户ID" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="id" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="120.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="480.0" spacing="40.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label text="账户名称" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="120.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="480.0" spacing="40.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label text="登录状态" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="state" text="登录中">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="120.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="480.0" spacing="40.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label text="用户职称" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="position" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="120.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="480.0" spacing="40.0" style="-fx-background-color: #ffffff;">
+                           <padding>
+                              <Insets left="120.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Label fx:id="ChangePassword" onMouseClicked="#Clicked" onMouseEntered="#Entered" onMouseExited="#Exited" text="修改密码" textFill="#660099">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="810.0" prefWidth="480.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="700.0" fitWidth="234.0">
+                     <image>
+                        <Image url="@myinfo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="123.0" top="55.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+.button{
+    -fx-background-color: #ededed;
+    -fx-pref-height: 33;
+    -fx-pref-width: 120;
+    -fx-background-radius:5;
+}
+.button:hover{
+    -fx-background-color: #dfdfdf;
+}
+.button:pressed{
+    -fx-background-color: #cfcfcf;
+}/*IMPORTANT DISCOVERY:NO SPACE BETWEEN THE BUTTON AND PRESSED*/
+.button:disabled{
+    -fx-background-color: #ededed;
+    -fx-pref-height: 33;
+    -fx-pref-width: 120;
+    -fx-background-radius:5;
+    -fx-text-fill: #aeaeae;
+}
+.button:disabled:hover{
+}
+.button:disabled:pressed{
+}/*IMPORTANT DISCOVERY:NO SPACE BETWEEN THE BUTTON AND PRESSED*/

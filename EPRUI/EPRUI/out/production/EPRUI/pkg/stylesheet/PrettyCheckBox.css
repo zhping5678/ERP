@@ -1,0 +1,19 @@
+.check-box .box{
+    -fx-background-color:white;
+    -fx-border-color: #b9b9b9;
+    -fx-border-width: 0.6 0.6 0.6 0.6;
+    -fx-pref-height: 13;
+    -fx-pref-width:13;
+}
+
+.check-box:hover .box{
+    -fx-border-color: rgb(99,4,96);
+
+}
+.check-box:disabled:hover .box{
+    -fx-border-color: #b9b9b9;
+
+}
+.check-box:selected .mark{
+    -fx-background-color: rgb(99,4,96);
+}

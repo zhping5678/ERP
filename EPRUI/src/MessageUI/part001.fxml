@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="50.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MessageUI.partController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="860.0" spacing="5.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 50;">
+         <children>
+            <Label fx:id="message1" prefHeight="50.0" prefWidth="200.0" text="time">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="message2" prefHeight="50.0" prefWidth="580.0" text="event">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="50.0" prefWidth="50.0">
+               <children>
+                  <Circle fx:id="circle" fill="#f2f2f2" layoutX="25.0" layoutY="25.0" onMouseClicked="#ClickedRemove" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label fx:id="close" alignment="CENTER" layoutX="15.0" onMouseClicked="#ClickedRemove" onMouseDragEntered="#Entered" onMouseDragExited="#Exited" prefHeight="50.0" prefWidth="20.0" text="X">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

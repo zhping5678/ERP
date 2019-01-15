@@ -1,0 +1,38 @@
+/*
+.titled-pane {
+    -fx-text-fill: rgb(0,100,157);
+}
+.titled-pane:focused {
+    -fx-color: -fx-base;
+    -fx-text-fill: white;
+}
+.titled-pane > .title {
+    -fx-text-fill: black;
+    -fx-color:#f2f2f2;
+    -fx-font-weight: bold;
+}
+.titled-pane > .title  > .label{
+    -fx-text-fill: rgb(0,100,157);
+    -fx-font-weight: bold;
+}
+.titled-pane:focused > .title {
+    -fx-color: rgb(0,100,157);
+    -fx-text-fill: white;
+}
+
+.titled-pane > .title:hover {
+    -fx-color: lightgrey;
+}
+*/
+
+.titled-pane > .title {
+    -fx-color:#f2f2f2;
+    -fx-pref-height:50;
+    -fx-Alignment:CENTER;
+    -fx-font-size:18;
+    -fx-border-width:0;
+    -fx-border-color:#f2f2f2;
+}
+
+
+

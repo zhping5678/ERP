@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onMouseClicked="#Finished" prefHeight="810.0" prefWidth="960.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AccountUI.AccountController">
+   <children>
+      <ImageView fitHeight="282.0" fitWidth="300.0" layoutX="330.0" layoutY="150.0" onMouseClicked="#Finished">
+         <image>
+            <Image url="@account.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="330.0" layoutY="470.0" onMouseClicked="#Finished" prefHeight="200.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <TextField fx:id="id" alignment="CENTER" focusTraversable="false" onKeyReleased="#Update" onMouseClicked="#ClickedI" promptText="请输入账户ID" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="name" alignment="CENTER" focusTraversable="false" onKeyReleased="#Update" onMouseClicked="#ClickedI" promptText="请输入账户名称" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </TextField>
+            <Label fx:id="balance" alignment="CENTER" onMouseClicked="#Finished" prefHeight="35.0" prefWidth="300.0" text="余额: ￥ 2000.00" textFill="#660099">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="ban" alignment="CENTER" layoutX="755.0" layoutY="660.0" onMouseClicked="#Clicked" onMouseEntered="#Entered" onMouseExited="#Exited" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #ffffff; -fx-border-radius: 15; -fx-border-color: #660099;" text="禁用该账户" textFill="#660099">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
